@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
+// 앱 시작 부분
 void main() {
   runApp(MyApp());
 }
 
+// 시작 클래스. 머터리얼 디자인 앱 생성
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
