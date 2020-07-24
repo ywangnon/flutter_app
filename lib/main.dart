@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 // 앱 시작 부분
+// 책에는 void main() => runApp(MyApp()); 로 되어있음.
 void main() {
   runApp(MyApp());
 }
@@ -28,11 +29,12 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Flutter Demo Home Page'), // 표시할 화면의 인스턴스
     );
   }
 }
 
+// 시작 클래스가 실제로 표시하는 클래스. 카운터 앱 화면
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
@@ -51,11 +53,13 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
+// 위 MyHomePage 클래스의 상태를 나타내는 State 클래스
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  int _counter = 0; // 화면에 표시할 상탯값인 카운터 숫자
 
+  // counter 변수를 1 증가시키고 화면을 다시 그리는 메서드
   void _incrementCounter() {
-    setState(() {
+    setState(() { // 화면을 다시 그리도록 하는 함수. StatefulWidget만 가능
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
       // so that the display can reflect the updated values. If we changed
@@ -65,6 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  // 화면에 UI를 그리는 메서드. 그려질 위젯을 반환
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -73,13 +78,13 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
+    return Scaffold(  // 머터리얼 디자인 기본 뼈대 위젯
+      appBar: AppBar( // 상단 앱바
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
+      body: Center( // 표시할 내용
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: Column(
@@ -103,16 +108,16 @@ class _MyHomePageState extends State<MyHomePage> {
               'You have pushed the button this many times:',
             ),
             Text(
-              '$_counter',
+              '$_counter',  // _counter 변수를 표시
               style: Theme.of(context).textTheme.headline4,
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: _incrementCounter, // 클릭 시 _incrementCounter() 메서드 실행
         tooltip: 'Increment',
-        child: Icon(Icons.add),
+        child: Icon(Icons.add), // 상단 앱바
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
