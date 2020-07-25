@@ -2,37 +2,56 @@ import 'package:flutter/material.dart';
 
 // 앱 시작 부분
 // 책에는 void main() => runApp(MyApp()); 로 되어있음.
+// runApp()함수에 MyApp() 인스턴스를 전달
 void main() {
   runApp(MyApp());
 }
 
 // 시작 클래스. 머터리얼 디자인 앱 생성
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+//
+// StatelessWidget 클래스는 상태가 없는 위젯을 정의하는데 사용.
+// StatelessWidget 클래스는 상태를 가지지 않는 위젯을 구성하는 기본 클래스.
+// 상태를 가지지 않는다. == 한 번 그려진 후 다시 그리지 않는 경우.
+// 프로퍼티로 변수를 가지지 않음. 상수는 가질 수 있음.
+// StatelessWidget 클래스는 build() 메서드를 가지고 있음.
+// build() 메서드는 위젯을 생성할 때 호출됨. 화면에 그릴 위젯을 작성해 반환.
+// MyApp 클래스는 StatelessWidget 클래스의 서브클래스.
+// MaterialApp 클래스의 인스턴스를 작성해 반환.
+class MyApp extends StatelessWidget { // StatelessWidget 상송
+  // 이 위젯은 응용 프로그램의 루트입니다.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
+    return MaterialApp( // MaterialApp 클래스 인스턴스 작성해서 반환
+      title: 'Flutter Demo', // 제목
       theme: ThemeData(
-        // This is the theme of your application.
+        // 여기가 어플리케이션의 테마입니다.
         //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
+        // "flutter run"으로 응용 프로그램을 실행 해보십시오. 애플리케이션에
+        // 파란색 툴바가있는 것을 볼 수 있습니다. 그런 다음 앱을 종료하지 않고
+        // 아래에서 primarySwatch를 Colors.green으로 변경 한 다음
+        // "hot reload"를 호출합니다. ("flutter run"을 실행 한 콘솔에서 "r"을
+        // 누르거나, 변경 내용을 Flutter IDE의 "hot reload"에 저장).
+        // 카운터는 다시 0으로 재설정되지 않았습니다.;
+        //  응용 프로그램이 다시 시작되지 않습니다.
         primarySwatch: Colors.blue,
-        // This makes the visual density adapt to the platform that you run
-        // the app on. For desktop platforms, the controls will be smaller and
-        // closer together (more dense) than on mobile platforms.
+        // 이렇게하면 시각적 밀도가 앱을 실행하는 플랫폼에 맞게 조정됩니다.
+        // 데스크톱 플랫폼의 경우 컨트롤이 모바일 플랫폼보다 작고 가깝습니다.
+        // (더 밀집 됨).
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'), // 표시할 화면의 인스턴스
+      // 표시할 화면의 인스턴스
+      // home에 작성하는 위젯이 실제 이 앱이 표시하는 위젯
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
+
+/**
+ * 이름 있는 인수는 인수 앞에 인수명 작성
+ * MyHomePage(title: 'hello')
+ * 이름 없는 인수는 인수명 작성하지 않음
+ * Text('hello')
+ */
 
 // 시작 클래스가 실제로 표시하는 클래스. 카운터 앱 화면
 class MyHomePage extends StatefulWidget {
