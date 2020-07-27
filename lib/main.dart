@@ -78,11 +78,10 @@ class _MyHomePageState extends State<MyHomePage> {
   // counter 변수를 1 증가시키고 화면을 다시 그리는 메서드
   void _incrementCounter() {
     setState(() { // 화면을 다시 그리도록 하는 함수. StatefulWidget만 가능
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
+      // setState에 대한 이 호출은 Flutter framework에 State가 무언가 변했다는 것을
+      // 말해주며, 디스플레이가 업데이트 된 값을 반영 할 수 있도록 아래의 빌드 메소드를
+      // 다시 실행합니다. setState()를 호출하지 않고 _counter를 변경하면 빌드 메소드가
+      // 다시 호출되지 않으므로 아무 일도 일어나지 않습니다.
       _counter++;
     });
   }
