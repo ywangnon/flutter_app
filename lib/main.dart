@@ -89,36 +89,34 @@ class _MyHomePageState extends State<MyHomePage> {
   // 화면에 UI를 그리는 메서드. 그려질 위젯을 반환
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
+    // 이 method는 setState가 호출 될 때마다 다시 실행됩니다.(위의 incrementCounter
+    // 메소드에 의해 수행되는 것처럼)
     //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
+    // Flutter 프레임워크는 빌드 메소드를 빠르게 재실행하도록 최적화되어 있으므로
+    // 위젯 인스턴스를 개별적으로 변경하지 않고 업데이트가 필요한 모든 항목을 재빌드
+    // 할 수 있습니다.
     return Scaffold(  // 머터리얼 디자인 기본 뼈대 위젯
       appBar: AppBar( // 상단 앱바
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
+        // 여기서 App.build 메서드로 만든 MyHomePage 개체에서 값을 가져와서 이를
+        // 사용하여 앱바 제목을 설정하는데 사용합니다.
         title: Text(widget.title),
       ),
       body: Center( // 표시할 내용
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
+        // Center는 레이아웃 위젯입니다. 하나의 child를 가지고, parent의 중심에
+        // 배치합니다.
         child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
+        // Column은 레이아웃위젯입니다. children 목록을 가져와서 세로로 정렬시킵니다.
+        // 기본적으로 자식 크기에 맞춰서 수평 크기를 조정하고, 부모 크기에 맞춰 높이를
+        // 조정합니다.
+        //
+        // "Debug painting"을 호출하십시오.(콘솔에서 "p"를 누르고 안드로이 스튜디오의
+        // Flutter Inspector 또는 Visual Studio Code의 "Toggle Debug Paint" 작업을
+        // 선택하여, 각 위젯의 wireframe을 확인하십시오.
+        //
+        // Column은 자체의 크기와 children의 위치를 제어하는 다양한 속성이 있습니다.
+        // 여기에서는 mainAxisAlignmnet를 사용하여 children의 중심을 세로의 가운데로 맞췄
+        // 습니다. Column이 수직이기 때문에 여기의 주축은 수직축입니다.(십자축은
+        // 수평)
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
@@ -131,6 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter, // 클릭 시 _incrementCounter() 메서드 실행
         tooltip: 'Increment',
