@@ -57,14 +57,13 @@ class MyApp extends StatelessWidget { // StatelessWidget 상송
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
+  // 이 위젯은 응용프로그램의 홈 페이지 입니다. 이 위젯은 stateful이며, 이 위젯이
+  // 어떻게 보이는지에 영향을 미치는 필드를 포함하는 State 객체를 가지고 있다는 것을
+  // 의미합니다.
 
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
+  // 이 클래스는 state를 위한 환경 설정입니다. 부모(이 경우는 App widget)로부터 값을
+  // (이 경우는 title)부여받고, State의 build 메소드에 의해 사용됩니다. Widget의 하위
+  // 클래스의 필드는 항상 "final"로 표시됩니다.
 
   final String title;
 
