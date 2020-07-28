@@ -21,28 +21,35 @@ class MyApp extends StatelessWidget { // StatelessWidget 상송
   // 이 위젯은 응용 프로그램의 루트입니다.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp( // MaterialApp 클래스 인스턴스 작성해서 반환
-      title: 'Flutter Demo', // 제목
-      theme: ThemeData(
-        // 여기가 어플리케이션의 테마입니다.
-        //
-        // "flutter run"으로 응용 프로그램을 실행 해보십시오. 애플리케이션에
-        // 파란색 툴바가있는 것을 볼 수 있습니다. 그런 다음 앱을 종료하지 않고
-        // 아래에서 primarySwatch를 Colors.green으로 변경 한 다음
-        // "hot reload"를 호출합니다. ("flutter run"을 실행 한 콘솔에서 "r"을
-        // 누르거나, 변경 내용을 Flutter IDE의 "hot reload"에 저장).
-        // 카운터는 다시 0으로 재설정되지 않았습니다.;
-        //  응용 프로그램이 다시 시작되지 않습니다.
-        primarySwatch: Colors.blue,
-        // 이렇게하면 시각적 밀도가 앱을 실행하는 플랫폼에 맞게 조정됩니다.
-        // 데스크톱 플랫폼의 경우 컨트롤이 모바일 플랫폼보다 작고 가깝습니다.
-        // (더 밀집 됨).
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('제목'),
       ),
-      // 표시할 화면의 인스턴스
-      // home에 작성하는 위젯이 실제 이 앱이 표시하는 위젯
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      body: Text('여기에 예제 작성'),
     );
+
+//    return MaterialApp( // MaterialApp 클래스 인스턴스 작성해서 반환
+//      title: 'Flutter Demo', // 제목
+//      theme: ThemeData(
+//        // 여기가 어플리케이션의 테마입니다.
+//        //
+//        // "flutter run"으로 응용 프로그램을 실행 해보십시오. 애플리케이션에
+//        // 파란색 툴바가있는 것을 볼 수 있습니다. 그런 다음 앱을 종료하지 않고
+//        // 아래에서 primarySwatch를 Colors.green으로 변경 한 다음
+//        // "hot reload"를 호출합니다. ("flutter run"을 실행 한 콘솔에서 "r"을
+//        // 누르거나, 변경 내용을 Flutter IDE의 "hot reload"에 저장).
+//        // 카운터는 다시 0으로 재설정되지 않았습니다.;
+//        //  응용 프로그램이 다시 시작되지 않습니다.
+//        primarySwatch: Colors.blue,
+//        // 이렇게하면 시각적 밀도가 앱을 실행하는 플랫폼에 맞게 조정됩니다.
+//        // 데스크톱 플랫폼의 경우 컨트롤이 모바일 플랫폼보다 작고 가깝습니다.
+//        // (더 밀집 됨).
+//        visualDensity: VisualDensity.adaptivePlatformDensity,
+//      ),
+//      // 표시할 화면의 인스턴스
+//      // home에 작성하는 위젯이 실제 이 앱이 표시하는 위젯
+//      home: MyHomePage(title: 'Flutter Demo Home Page'),
+//    );
   }
 }
 
@@ -55,6 +62,7 @@ class MyApp extends StatelessWidget { // StatelessWidget 상송
 
 // 시작 클래스가 실제로 표시하는 클래스. 카운터 앱 화면
 class MyHomePage extends StatefulWidget {
+
   MyHomePage({Key key, this.title}) : super(key: key);
 
   // 이 위젯은 응용프로그램의 홈 페이지 입니다. 이 위젯은 stateful이며, 이 위젯이
