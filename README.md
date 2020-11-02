@@ -34,3 +34,5 @@ samples, guidance on mobile development, and a full API reference.
     - README.md : 프로젝트 설명을 작성하는 파일
 
 // 문서는 대부분 건들이지 말자
+
+// 2020.11.02 업데이트 이후 실행이 안된다. 수정중
