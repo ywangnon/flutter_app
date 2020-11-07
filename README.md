@@ -35,4 +35,22 @@ samples, guidance on mobile development, and a full API reference.
 
 // 문서는 대부분 건들이지 말자
 
-// 2020.11.02 업데이트 이후 실행이 안된다. 수정중
+## 위젯
+
+- Flutter에서는 모든 것이 위젯
+    - 보이는 layout, 안보이는 center 등 모든 요소들을 위젯이라 함
+    - 위젯이 모여서 또 위젯을 만듦
+
+- 중요위젯
+    - stateless: Value 값을 저장, 동적인 위젯
+    - stateful: 이전 상호작용의 어떠한 값도 저장하지 않음, 변화하지 않는 정적인 위젯
+    - Inherited
+
+### 위젯 트리
+
+- 위젯들은 트리구조로 정리 가능
+- 한 위젯 내에 얼마든지 다른 위젯들을 포함 가능
+- 위젯은 부모, 자식으로 구분
+- 부모 위젯을 widget container라고도 부름
+
+* Scaffold: 빈 페이지를 만들어 주는 중요한 위젯
