@@ -7,6 +7,47 @@ void main() {
   runApp(MyApp());
 }
 
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // return Scaffold(
+    //   appBar: AppBar(title: Text('Hello World')),
+    //   body: Text('Hello World'),
+    // );
+    return MaterialApp(
+      title: 'First app',
+      theme: ThemeData(
+        primarySwatch: Colors.blue // 견본 색생
+      ),
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Hello World'),
+      ),
+      body: Text('Hello World'),
+    );
+  }
+}
+
+
+// 오류
+/**
+ * 가장 먼저 할 일은 머터리얼 디자인을 가져와야 함.
+ * main 생성. 프로젝트의 시작점. 후에 최상위 함수인 runApp 구현. 위젯을 argument로 가짐
+ * MyApp 구현시 구현의 기능이 있는 Material 위젯을 구현해야함.
+ * Flutter 는 위젯 구분이 중요.
+ */
+
+
+/*
+
 // 시작 클래스. 머터리얼 디자인 앱 생성
 //
 // StatelessWidget 클래스는 상태가 없는 위젯을 정의하는데 사용.
@@ -146,3 +187,5 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+*/
