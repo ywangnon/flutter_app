@@ -31,7 +31,7 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Hello World'),
       ),
-      body: Text('Hello World'),
+      body: Text('Hello World', style: TextStyle(fontSize: 30),),
     );
   }
 }
@@ -42,6 +42,8 @@ class MyHomePage extends StatelessWidget {
  * 가장 먼저 할 일은 머터리얼 디자인을 가져와야 함.
  * main 생성. 프로젝트의 시작점. 후에 최상위 함수인 runApp 구현. 위젯을 argument로 가짐
  * MyApp 구현시 구현의 기능이 있는 Material 위젯을 구현해야함.
+ * Material 디자인 앱을 만들기 위해서는 Scaffold로 감싸야함.
+ * 즉, Scaffold는 Material 
  * Flutter 는 위젯 구분이 중요.
  */
 

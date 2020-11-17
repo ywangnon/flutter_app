@@ -54,3 +54,6 @@ samples, guidance on mobile development, and a full API reference.
 - 부모 위젯을 widget container라고도 부름
 
 * Scaffold: 빈 페이지를 만들어 주는 중요한 위젯
+
+// https://flutter-ko.dev/docs/get-started/flutter-for/ios-devs
+// 좀 더 볼 것. 계속 위젯 단계에서 오류
